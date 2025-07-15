@@ -4,8 +4,10 @@ phases:
   pre_build:
     commands:
       - echo "Starting pre-build phase"
-      - pip install --upgrade pip  # Ensure pip is up-to-date
-      - pip install -r requirements.txt  # Install dependencies from requirements.txt
+      - python3 --version  # Check the Python version
+      - pip3 --version  # Check pip version
+      - pip3 install --upgrade pip  # Ensure pip is up-to-date
+      - pip3 install -r requirements.txt  # Install dependencies from requirements.txt
   build:
     commands:
       - echo "Building the application"
