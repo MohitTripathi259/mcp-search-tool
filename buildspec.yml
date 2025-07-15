@@ -4,10 +4,10 @@ phases:
   pre_build:
     commands:
       - echo "Starting pre-build phase"
-      - python3 --version  # Check the Python version
-      - pip3 --version  # Check pip version
-      - pip3 install --upgrade pip  # Ensure pip is up-to-date
-      - pip3 install -r requirements.txt  # Install dependencies from requirements.txt
+      - python3 --version  # Log Python version to confirm correct version is used
+      - pip3 --version  # Log pip version to ensure pip is properly installed
+      - pip3 install --upgrade pip  # Upgrade pip to the latest version
+      - pip3 install -r requirements.txt  # Install dependencies
   build:
     commands:
       - echo "Building the application"
@@ -17,4 +17,4 @@ phases:
 
 artifacts:
   files:
-    - '**/*'  # Ensure all files are included
+    - '**/*'  # Ensure all files are included in the build output
